@@ -1,0 +1,168 @@
+/* Core Layout */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 120vh;
+    background-color: #dfe3ee; /* Set the background color for the entire page */
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+/* Left Container (Data Privacy Content) */
+.left-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #dfe3ee;
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.data-privacy-container {
+    max-width: 60rem; /* Increased max-width to make the container wider */
+    width: 100%;
+    background: #f7f7f7;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.data-privacy-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0038a7;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+h2,
+h3 {
+    font-size: 1.5rem;
+    color: #0038a7;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+/* Collapsible Section Styles */
+.collapsible {
+    background-color: #f0f4fb;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.collapsible-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures text and icon are aligned */
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+.collapsible-icon {
+    margin-left: 10px; /* Optional: Adjust space between text and icon */
+}
+
+.collapsible:hover {
+    background-color: #c8d8ff;
+}
+
+.collapsible-content {
+    max-height: 0; /* Start with collapsed state */
+    overflow: hidden; /* Hide content when collapsed */
+    transition: max-height 0.5s ease-out; /* Sliding down animation */
+    padding: 0 10px;
+    margin-top: 10px;
+    background-color: #e4ebf7;
+}
+
+/* When the section is active (expanded), allow the content to be shown with sliding effect */
+.collapsible.active .collapsible-content {
+    max-height: 500px; /* Arbitrary large value to ensure content is visible */
+    padding: 10px; /* Restore padding on expansion */
+}
+
+/* Footer */
+.footer {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.signup-link {
+    font-size: 1rem;
+    color: #0038a7;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+/* Right Container (Logo Only) */
+.right-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dfe3ee;
+    flex: 1;
+    padding: 2rem 1rem;
+}
+
+.logo-placeholder {
+    width: 80px;
+    height: auto;
+}
+
+/* Language Toggler */
+.language-toggler {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Stack containers on smaller screens */
+    }
+
+    .left-container {
+        padding: 1rem;
+    }
+
+    .data-privacy-container {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .signup-link {
+        font-size: 0.9rem;
+    }
+
+    .right-container {
+        padding: 1rem;
+    }
+
+    .logo-placeholder {
+        width: 100px; /* Slightly smaller logo on mobile */
+    }
+
+    .right-header {
+        font-size: 2rem;
+    }
+
+    .right-subtitle {
+        font-size: 1.1rem;
+    }
+}

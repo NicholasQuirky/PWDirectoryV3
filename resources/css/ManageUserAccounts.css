@@ -1,0 +1,243 @@
+/* Main content area */
+.main-content {
+    width: 100%; /* Full width */
+    padding: 2rem;
+    background-color: #E5E7EB;
+}
+
+/* Manage users container */
+.manage-users-container {
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #003da5;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: #0038a7;
+    color: white;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td {
+    color: #333;
+}
+
+/* Action buttons */
+.actions-button {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.actions-button:hover {
+    background-color: #ff7875;
+}
+
+/* Profile picture placeholder */
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    display: inline-block;
+}
+
+.prof-photo-placeholder {
+    width: 50px; /* w-12 */
+    height: 50px; /* h-12 */
+    border-radius: 9999px; /* rounded-full */
+    object-fit: cover; /* object-cover */
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center; /* Center buttons vertically */
+    gap: 8px; /* Add small spacing between buttons */
+    margin: 20px 0; /* Optional margin around the pagination area */
+}
+
+/* Pagination Button Styling */
+.pagination-container .pagination-btn {
+    padding: 10px 15px;
+    border: none;
+    background-color: #d6d6d6; /* Unhighlighted gray */
+    color: #000; /* Black text for unhighlighted buttons */
+    border-radius: 50%; /* Rounded button */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.pagination-container .pagination-btn:hover {
+    background-color: #c0c0c0; /* Slightly darker gray on hover */
+}
+
+.pagination-container .pagination-btn.active {
+    background-color: #1c4c94; /* Highlighted blue */
+    color: white; /* White text for highlighted buttons */
+    font-weight: bold; /* Bold text for emphasis */
+    transform: scale(1.1); /* Slightly enlarge for visual feedback */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Deeper shadow for active */
+}
+/* Responsive styling for larger mobile screens (600px to 900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+    h1 {
+        font-size: 22px;
+        text-align: center; /* Center-align title */
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+    .profile-picture {
+        width: 35px;
+        height: 35px;
+    }
+    .prof-photo-placeholder {
+        width: 35px; /* w-12 */
+        height: 35px; /* h-12 */
+    }
+
+    .actions-button {
+        padding: 5px 12px;
+        font-size: 14px;
+    }
+
+    .pagination-controls button {
+        padding: 6px 12px;
+    }
+}
+
+/* Responsive styling for smaller screens (320px to 599px) */
+@media (min-width: 320px) and (max-width: 599px) {
+    h1 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .manage-users-container,
+    .pagination-controls {
+        text-align: center; /* Center-align text and pagination controls */
+        justify-content: center;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    th {
+        font-size: 10px;
+    }
+
+    .profile-picture {
+        width: 30px;
+        height: 30px;
+        margin: 0 auto; /* Center profile picture */
+        display: block;
+    }
+    .prof-photo-placeholder {
+        width: 30px; /* w-12 */
+        height: 30px; /* h-12 */
+    }
+
+    .actions-button {
+        padding: 4px 8px;
+        font-size: 12px;
+        margin: 5px auto; /* Center-align button */
+        display: block;
+    }
+
+    /* Stack table layout vertically for smaller screens */
+    table,
+    th,
+    td,
+    tr {
+        display: block;
+        width: 100%;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center; /* Center-align row content */
+    }
+
+    td {
+        text-align: center; /* Center-align table cell content */
+        position: relative;
+        padding-left: 2%;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+    .pagination-container .pagination-controls {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .pagination-controls button {
+        font-size: small;
+        height: auto;
+        width: 50%; /* Make pagination buttons take up most of the width */
+        margin: 5px auto; /* Center-align pagination buttons */
+    }
+
+    .pagination-controls span {
+        font-size: x-small;
+        margin: 20px;
+        text-align: center;
+    }
+}

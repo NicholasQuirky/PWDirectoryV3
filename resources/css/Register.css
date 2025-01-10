@@ -1,0 +1,515 @@
+/* Core Layout */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #dfe3ee;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    flex-direction: row-reverse; /* Swaps the positions of the containers */
+}
+
+/* Left Container (Login Form) */
+.left-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 2rem;
+    padding-right: 3rem;
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+}
+
+.right-header {
+    position: relative;
+    top: 260px;
+    left: 200px;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #0038a7;
+}
+
+.right-subtitle {
+    position: relative;
+    top: 270px;
+    left: 200px;
+    color: #333;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.logo-placeholder {
+    position: relative;
+    top: 250px;
+    left: 200px;
+    width: 140px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 0.1rem; /* Space between logo and header */
+}
+
+/* Register Form Styles */
+.register-container {
+    animation: slideInFromLeft 1s ease-out;
+    max-width: 40rem;
+    width: 100%;
+    background: #f7f7f7;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.register-title {
+    animation: appear 2s ease-out;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0038a7;
+    text-align: center;
+}
+
+.register-subtitle {
+    animation: appear 3s ease-out;
+    text-align: center;
+    color: #333;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Input Fields */
+.relative {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.register-input {
+    height: 2.5rem;
+    width: 100%;
+    border: 1px solid #8b9dc3;
+    border-radius: 0.25rem;
+    color: #6e6e6e;
+    outline: none;
+    padding: 0.5rem 2.5rem 0.5rem 0.5rem;
+    margin-top: 0.5rem;
+    transition: border-color 0.2s ease;
+}
+
+.register-label {
+    position: absolute;
+    left: 0;
+    top: -0.9rem;
+    font-size: 0.875rem;
+    color: #000000;
+    transition: all 0.2s ease;
+}
+
+/* Register Button */
+.register-button {
+    width: 30%;
+    padding: 0.5rem 1rem;
+    background-color: #0038a7;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    align-self: center; /* Center the button */
+}
+
+.register-button:hover {
+    background-color: #00297d;
+}
+
+/* Adjustments for link */
+.register-link {
+    margin-top: 2%;
+    text-align: center;
+}
+
+.register-link a {
+    color: #333;
+    text-decoration: underline;
+}
+
+.register-link a:hover {
+    color: #555555;
+}
+
+/* Error Message */
+.error {
+    color: red; /* Red color for error messages */
+    font-size: 0.875rem; /* Slightly smaller font size */
+    margin-top: 0.25rem; /* Space above the error message */
+}
+
+.password-toggle-button-1 {
+    position: absolute;
+    right: 10px;
+    top: 30px; /* Center the button vertically within its container */
+    transform: translateY(
+        -50%
+    ); /* Adjust the button to be exactly in the middle */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: medium;
+    color: #333;
+    z-index: 1; /* Ensure the button stays above other elements */
+}
+
+.password-toggle-button-1:hover {
+    color: #555;
+}
+
+/* Password Toggle Button */
+.password-toggle-button {
+    position: absolute;
+    right: 10px;
+    top: 30px; /* Center the button vertically within its container */
+    transform: translateY(
+        -50%
+    ); /* Adjust the button to be exactly in the middle */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: medium;
+    color: #333;
+    z-index: 1; /* Ensure the button stays above other elements */
+}
+
+.password-toggle-button:hover {
+    color: #555;
+}
+
+.terms-label{
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+.terms-checkbox{
+    margin-left: 10px;
+}
+
+.register-disclaimer{
+    font-size: 0.9rem;
+    margin-left: 15px;
+}
+
+
+@media 
+    (min-width: 1400px) and (max-width: 1799px)
+{
+    .register-container {
+        position: relative;
+        right: -15px;
+     }
+ 
+     .right-header {
+         position: relative;
+         top: 240px;
+         left: 60px;
+         font-size: 3rem;
+     }
+     
+     .right-subtitle {
+         position: relative;
+         top: 300px;
+         left: 60px;
+         color: #333;
+         margin-top: -2rem;
+         font-size: 1.5rem;
+         text-align: center;
+     }
+     
+     .logo-placeholder {
+         position: relative;
+         top: 210px;
+         left: 70px;
+         width: 140px; /* Adjust size as needed */
+         height: auto;
+         margin-bottom: 0.1rem; /* Space between logo and header */
+     }
+}
+
+/* Media Queries */
+@media 
+    (min-width: 901px) and (max-width: 1399px)
+{
+
+    .register-container {
+       position: relative;
+       right: -15px;
+    }
+
+    .right-header {
+        position: relative;
+        top: 240px;
+        left: 20px;
+        font-size: 1.8rem;
+    }
+    
+    .right-subtitle {
+        position: relative;
+        top: 300px;
+        left: 20px;
+        color: #333;
+        margin-top: -2rem;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    
+    .logo-placeholder {
+        position: relative;
+        top: 210px;
+        left: 20px;
+        width: 140px; /* Adjust size as needed */
+        height: auto;
+        margin-bottom: 0.1rem; /* Space between logo and header */
+    }
+    .register-disclaimer-container{
+        text-align: center;
+        position: relative;
+        left: -15px;
+    }
+    .terms-checkbox{
+        margin-left: 1px;
+    }
+    .terms-label{
+        font-size: 0.65rem;
+        font-weight: bold;
+    }
+}
+
+/* Tablet */
+@media 
+    (min-width: 600px) and (max-width: 900px)
+{
+    .main-content {
+        flex-direction: column; /* Keep the containers stacked */
+    }
+
+    .right-container {
+        min-height: 35vh;
+        order: -1; /* Make the right container appear on top */
+    }
+
+    .right-header {
+        position: relative;
+        top: 60px;
+        left: 5px;
+        font-size: 1.7rem;
+        font-weight: 800;
+        color: #0038A7;
+    }
+
+    .right-subtitle {
+        position: relative;
+        top: 65px;
+        left: 5px;
+        color: #333;
+        margin-top: 1rem;
+        font-size: 1.1rem;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .logo-placeholder {
+        position: relative;
+        top: 50px;
+        left: 5px;
+        width: 140px; /* Adjust size as needed */
+        height: auto;
+        margin-bottom: 0.1rem; /* Space between logo and header */
+    }
+
+    .register-container{
+        margin-bottom: 10px;
+    }
+
+    .register-form {
+        gap: 4vw;
+    }
+
+    .register-input {
+        height: 1.8rem; /* Fixed height */
+        font-size: small;
+    }
+
+    .register-subtitle {
+        font-size: medium;
+        margin-bottom: 0.7rem;
+    }
+
+    .register-label {
+        font-size: small;
+        position: absolute;
+        left: 0;
+        top: -1.3rem;        
+    }
+
+    .register-disclaimer-container{
+        text-align: center;
+        position: relative;
+        left: -15px;
+    }
+
+    .password-toggle-button{
+        position: absolute;
+        top: 25px;
+        font-size: small;
+    }
+
+    .password-toggle-button-1{
+        position: absolute;
+        top: 25px;
+        font-size: small;
+    }
+
+}
+
+
+/* Mobile */
+@media (min-width: 320px) and (max-width: 599px) {
+    .main-content {
+        flex-direction: column; /* Keep the containers stacked */
+    }
+
+    .right-container {
+        min-height: 35vh;
+        order: -1; /* Make the right container appear on top */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .page-container {
+        width: 100vw;
+        height: 130vh;
+        overflow: hidden;
+    }
+
+    .right-header {
+        position: relative;
+        top: 60px;
+        left: 5px;
+        font-size: 1.7rem;
+        font-weight: 800;
+        color: #0038A7;
+    }
+    
+    .right-subtitle {
+        position: relative;
+        top: 65px;
+        left: 5px;
+        color: #333;
+        margin-top: 1rem;
+        font-size: 1.1rem;
+        font-weight: 400;
+        text-align: center;
+    }
+    
+    .logo-placeholder {
+        position: relative;
+        top: 50px;
+        left: 5px;
+        width: 140px; /* Adjust size as needed */
+        height: auto;
+        margin-bottom: 0.1rem; /* Space between logo and header */
+    }
+    
+
+    .left-container {
+        flex: 1; /* Ensure it also takes available height */
+        padding: 1.5rem; /* Keep the padding for aesthetics */
+    }
+
+    .register-title {
+        font-size: larger;
+    }
+
+    .register-input {
+        height: 1.8rem;
+        font-size: small;
+    }
+
+    .forgot-password {
+        font-size: small;
+    }
+
+    .register-subtitle {
+        font-size: medium;
+        margin-bottom: 0.7rem;
+    }
+
+    .register-label {
+        font-size: small;
+        position: absolute;
+        left: 0.1rem;
+        top: -0.8rem;
+        transition: all 0.2s ease;
+    }
+
+    .register-button {
+        font-size: small;
+        height: auto;
+        width: 60%;
+        padding: 0.3rem 1rem;
+        margin-top: -2rem;
+        align-self: center;
+        text-align: center;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .password-toggle-button-1 {
+        position: absolute;
+        top: 25px;
+        font-size: x-small;
+    }
+
+    .password-toggle-button {
+        position: absolute;
+        top: 25px;
+        font-size: small;
+    }
+
+    .register-link {
+        margin-top: 10px;
+        font-size: small;
+    }
+
+    .terms-label{
+        font-size: 0.58rem;
+        font-weight: bold;
+
+    }
+    .terms-checkbox{
+        margin-left: 1px;
+    }
+    .register-disclaimer{
+        font-size: 0.7rem;
+    }
+    .register-disclaimer-container{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}

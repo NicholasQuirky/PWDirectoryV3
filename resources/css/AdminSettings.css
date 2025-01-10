@@ -1,0 +1,41 @@
+/* Main content section */
+.main-content {
+    flex-grow: 1;
+    padding: 2rem;
+    background-color: #e5effa; /* Subtle background color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+/* Logout button styling */
+.logout-container {
+    margin-top: 20px;
+}
+
+.logout-button {
+    background-color: #D62839 ;
+    border: 1px solid #D62839;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.logout-button:hover {
+    background-color: #F3F4F6; /* Slightly darker gray on hover */
+    color: #000;
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 2rem;
+    position: relative;
+    top: -60px;
+}

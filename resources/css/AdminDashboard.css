@@ -1,0 +1,126 @@
+/* resources/css/AdminDashboard.css */
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-content {
+    padding: 2rem;
+    background-color: #E5E7EB; /* Subtle background color */
+    min-height: 100vh; /* Ensure the content fills the viewport */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.dashboard-header {
+    text-align: center;
+}
+
+.dashboard-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #002369; /* Match sidebar/navbar color */
+}
+
+.dashboard-header p {
+    font-size: 1rem;
+    color: #4b5563; /* Muted gray */
+    margin-top: 0.5rem;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 900px; /* Limit the width for better layout */
+}
+
+.card {
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, rgba(240, 247, 255, 0.95), rgba(255, 255, 255, 0.85));
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #111827; /* Strong dark gray */
+    margin-bottom: 0.5rem;
+}
+
+.card .count {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #002369; /* Match primary color */
+}
+
+.card-footer {
+    font-size: 0.8rem;
+    color: #6b7280; /* Light gray */
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Logo Placeholder */
+.logo-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 6rem;
+}
+
+.logo {
+    width: 200px; /* Adjust size as needed */
+    height: 200px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* For small screens (320px to 599px) */
+@media (min-width: 320px) and (max-width: 599px) {
+    .card {
+        padding: 1rem; /* Reduce padding */
+        width: 100%; /* Ensure the card takes up full width */
+    }
+
+    .card h2 {
+        font-size: 1rem; /* Decrease font size for small screens */
+    }
+
+    .card .count {
+        font-size: 2rem; /* Decrease count font size */
+    }
+
+    .card-footer {
+        font-size: 0.7rem; /* Decrease footer font size */
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr; /* One card per row */
+    }
+
+    .logo {
+        width: 150px; /* Adjust logo size for smaller screens */
+        height: 150px;
+    }
+}

@@ -1,0 +1,57 @@
+version: 1
+services:
+  - type: web
+    name: pw-directory
+    env: node
+    buildCommand: |
+      npm install --legacy-peer-deps
+      npm run build
+    startCommand: npm run start
+    envVars:
+      - key: APP_NAME
+        value: PWDirectoryv3
+      - key: APP_ENV
+        value: local
+      - key: APP_KEY
+        value: base64:KMKBwhzYciRarkxvR6GhpuB1gFKpLVaSmKsBo4m+pkY=
+      - key: APP_DEBUG
+        value: true
+      - key: APP_TIMEZONE
+        value: UTC
+      - key: APP_URL
+        value: http://localhost
+      - key: DB_CONNECTION
+        value: mysql
+      - key: DB_HOST
+        value: 127.0.0.1
+      - key: DB_PORT
+        value: "3306"
+      - key: DB_DATABASE
+        value: pwdirectoryv3_db
+      - key: DB_USERNAME
+        value: root
+      - key: DB_PASSWORD
+        value: ""
+      - key: MAIL_MAILER
+        value: smtp
+      - key: MAIL_HOST
+        value: smtp.gmail.com
+      - key: MAIL_PORT
+        value: "587"
+      - key: MAIL_USERNAME
+        value: pwdirectoryv3main@gmail.com
+      - key: MAIL_PASSWORD
+        value: cctsvtoqbpozsgog
+      - key: MAIL_ENCRYPTION
+        value: tls
+      - key: MAIL_FROM_ADDRESS
+        value: "pwdirectoryv3main@gmail.com"
+      - key: MAIL_FROM_NAME
+        value: PWDirectoryv3
+      - key: GOOGLE_PLACES_API_KEY
+        value: AIzaSyB7s_wnGHNh4BKaeiuEOOL6qSc_bvwv7nA
+    plan: free
+  - type: database
+    name: pw-directory-db
+    env: mysql
+    plan: free

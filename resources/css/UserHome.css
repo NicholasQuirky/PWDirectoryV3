@@ -1,0 +1,681 @@
+img {
+    margin-top: 10px;
+    margin-bottom: 10px; /* Adjust as necessary */
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* This is equivalent to h-screen */
+}
+
+.flex-container {
+    display: flex;
+    flex-grow: 1;
+}
+
+.sidebar-container {
+    width: 35%; /* Equivalent to w-1/4 */
+    background-color: #f7fafc; /* Equivalent to bg-gray-100 */
+    padding: 1rem; /* Equivalent to p-4 */
+    overflow-y: auto; /* Equivalent to overflow-y-auto */
+    height: 100%; /* Equivalent to h-full */
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.search-header {
+    font-weight: bold; /* Equivalent to font-bold */
+    font-size: 1.125rem; /* Equivalent to text-lg (1.125rem is the default for text-lg in Tailwind) */
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 (0.5rem is the default for mb-2 in Tailwind) */
+}
+
+/* Add extra right padding to the input to account for the clear button */
+.combobox-input {
+    width: 100%; /* Equivalent to w-full */
+    padding: 0.5rem; /* Equivalent to p-2 */
+    border: 1px solid #d1d5db; /* Equivalent to border-gray-300 */
+    border-radius: 0.375rem; /* Equivalent to rounded-md */
+    margin-bottom: 1rem; /* Equivalent to mb-4 */
+}
+
+.sort-container {
+    margin-bottom: 1rem; /* Equivalent to mb-4 */
+}
+
+.sort-element {
+    display: block; /* Equivalent to block */
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+}
+
+.sort-element-2 {
+    width: 100%; /* Equivalent to w-full */
+    padding: 0.5rem; /* Equivalent to p-2 */
+    border: 1px solid #d1d5db; /* Equivalent to border and border-gray-300 */
+    border-radius: 0.375rem; /* Equivalent to rounded-md */
+}
+
+.nearby-estb-container {
+    display: flex; /* Equivalent to flex */
+    align-items: center; /* Equivalent to items-center */
+    margin-bottom: 1rem; /* Equivalent to mb-4 */
+}
+
+.nearby-estb-header {
+    font-weight: bold; /* Equivalent to font-bold */
+    font-size: 1.125rem; /* Equivalent to text-lg */
+    margin-right: 1rem; /* Equivalent to mr-4 */
+}
+
+.nearby-speaker {
+    background-color: #3b82f6; /* Equivalent to bg-blue-500 */
+    color: white; /* Equivalent to text-white */
+    padding: 0.5rem; /* Equivalent to p-2 */
+    border-radius: 0.375rem; /* Equivalent to rounded-md */
+    display: flex; /* Equivalent to flex */
+    align-items: center; /* Equivalent to items-center */
+    justify-content: center; /* Equivalent to justify-center */
+}
+
+.estb-card-container {
+    border: 1px solid #d1d5db; /* Equivalent to default border (gray-300) */
+    border-radius: 0.375rem; /* Equivalent to rounded-md */
+    padding: 1rem; /* Equivalent to p-4 */
+    margin-bottom: 1rem; /* Equivalent to mb-4 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Equivalent to shadow-md */
+    background-color: white; /* Equivalent to bg-white */
+}
+
+.estb-header-container {
+    display: flex; /* Equivalent to flex */
+    align-items: center; /* Equivalent to items-center */
+    justify-content: space-between; /* Equivalent to justify-between */
+}
+
+.estb-header-name {
+    font-weight: bold; /* Equivalent to font-bold */
+    font-size: 1.125rem; /* Equivalent to text-lg */
+}
+
+.estb-details-speaker {
+    background-color: #3b82f6; /* Equivalent to bg-blue-500 */
+    color: white; /* Equivalent to text-white */
+    padding: 0.5rem; /* Equivalent to p-2 */
+    border-radius: 0.375rem; /* Equivalent to rounded-md */
+    display: flex; /* Equivalent to flex */
+    align-items: center; /* Equivalent to items-center */
+    justify-content: center; /* Equivalent to justify-center */
+    margin-left: 1.5rem; /* Equivalent to ml-6 */
+}
+
+.estb-photos {
+    width: 100%; /* Equivalent to w-full */
+    height: auto; /* Equivalent to h-auto */
+    border-radius: 0.375rem; /* Equivalent to rounded-md */
+    margin-bottom: 1rem; /* Equivalent to mb-4 */
+}
+
+.estb-photo-p {
+    color: #6b7280; /* Equivalent to text-gray-500 */
+}
+
+.place-accesibility-details {
+    margin-top: 0.5rem; /* Equivalent to mt-2 */
+    font-size: 0.875rem; /* Equivalent to text-sm */
+}
+
+.place-accesbility-features-container {
+    margin-top: 0.5rem;
+}
+
+.place-accesbility-features-header {
+    font-weight: bold;
+}
+
+.place-btn-container {
+    display: flex; /* Equivalent to flex */
+    flex-wrap: wrap; /* Equivalent to flex-wrap */
+    gap: 0.5rem; /* Equivalent to gap-2 */
+    margin-top: 0.5rem; /* Equivalent to mt-2 */
+}
+
+.place-btn {
+    color: white; /* Equivalent to text-white */
+    padding-left: 1rem; /* Equivalent to px-4 */
+    padding-right: 1rem; /* Equivalent to px-4 */
+    padding-top: 0.5rem; /* Equivalent to py-2 */
+    padding-bottom: 0.5rem; /* Equivalent to py-2 */
+    border-radius: 0.375rem; /* Equivalent to rounded-md */
+    display: flex; /* Equivalent to flex */
+    align-items: center; /* Equivalent to items-center */
+    justify-content: center; /* Equivalent to justify-center */
+    gap: 0.75rem; /* Equivalent to gap-x-3 */
+    transition: all 300ms; /* Equivalent to transition duration-300 */
+    width: 25%;
+}
+
+.maps-container {
+    width: 100%; /* Equivalent to w-3/4 */
+    position: relative; /* Equivalent to relative */
+    height: 100%; /* Equivalent to h-full */
+    overflow-y: auto; /* Enables vertical scrolling */
+    max-height: 100vh; /* Ensures the container doesn't exceed the viewport height */   
+}
+
+.review-container {
+    position: fixed; /* Equivalent to fixed */
+    top: 0; /* Equivalent to inset-0 */
+    right: 0; /* Equivalent to inset-0 */
+    bottom: 0; /* Equivalent to inset-0 */
+    left: 0; /* Equivalent to inset-0 */
+    background-color: rgba(45, 55, 72, 0.5); /* bg-gray-800 with 50% opacity */
+    display: flex; /* Equivalent to flex */
+    justify-content: center; /* Equivalent to justify-center */
+    align-items: center; /* Equivalent to items-center */
+}
+
+.star-rating {
+    display: flex; /* Equivalent to flex */
+    justify-content: center; /* Center content horizontally */
+    margin-bottom: 1rem; /* Equivalent to mb-4 (1rem = 16px default) */
+}
+
+.rating-error-p {
+    color: #ef4444; /* Equivalent to text-red-500 */
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 (8px) */
+    text-align: center; /* Centers text horizontally */
+    display: flex; /* Enables Flexbox layout */
+    justify-content: center; /* Centers child elements horizontally */
+}
+
+.feedback-container {
+    width: 100%; /* Full width */
+    padding: 0.5rem; /* 2 units of padding */
+    border: 1px solid; /* Default border */
+}
+
+.review-btn-submit {
+    background-color: #3b82f6; /* Equivalent to bg-blue-500 */
+    color: white; /* Equivalent to text-white */
+    padding: 0.5rem 1rem; /* Equivalent to px-4 py-2 */
+    border-radius: 0.375rem; /* Equivalent to rounded-md */
+}
+
+.review-btn-cancel {
+    background-color: #d1d5db; /* Equivalent to bg-gray-300 */
+    padding: 0.5rem 1rem; /* Equivalent to px-4 py-2 */
+    border-radius: 0.375rem; /* Equivalent to rounded-md */
+}
+.view-review-overlay {
+    position: fixed; /* Equivalent to fixed */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; /* Equivalent to inset-0 */
+    background-color: rgba(31,41,55,0.5); /* Equivalent to bg-gray-800 bg-opacity-50 */
+    display: flex; /* Equivalent to flex */
+    justify-content: center; /* Equivalent to justify-center */
+    align-items: center; /* Equivalent to items-center */
+}
+.view-review-placename {
+    font-size: 1.125rem; /* Equivalent to text-lg (18px) */
+    font-weight: 700; /* Equivalent to font-bold */
+    margin-bottom: 1rem; /* Equivalent to mb-4 (16px) */
+    text-align: center; /* Equivalent to text-center */
+}
+
+.view-review-card-container {
+    background-color: white; /* Equivalent to bg-white */
+    padding: 1.5rem; /* Equivalent to p-6 */
+    border-radius: 0.375rem; /* Equivalent to rounded-md */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Equivalent to shadow-md */
+    width: 100%; /* Equivalent to w-full */
+    max-width: 32rem; /* Equivalent to max-w-lg (32rem = 512px) */
+    display: flex; /* Equivalent to flex */
+    flex-direction: column; /* Equivalent to flex-col */
+    align-items: center; /* Equivalent to items-center */
+    overflow: hidden; /* Equivalent to overflow-hidden */
+}
+
+.view-review-container {
+    width: 100%; /* Equivalent to w-full */
+    overflow-y: auto; /* Equivalent to overflow-y-auto */
+    max-height: 80vh; /* Equivalent to max-h-[80vh] */
+}
+
+.view-reviewer-details {
+    display: flex; /* Equivalent to flex */
+    justify-content: space-between; /* Equivalent to justify-between */
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 (0.5rem) */
+}
+
+.view-reviewer-details2 {
+    font-weight: bold;
+}
+
+.view-reviewer-star {
+    color: #f59e0b; /* Equivalent to Tailwind's yellow-500 color */
+}
+
+.view-reviewer-date {
+    font-size: 0.875rem; /* text-sm */
+    margin-bottom: 0.5rem; /* mb-2 */
+    color: #6b7280; /* text-gray-500 */
+}
+
+.directions {
+    position: absolute;
+    bottom: 30px; /* Distance from the bottom of the map */
+    right: 70px; /* Distance from the right edge of the map */
+    background-color: #1c4c94; /* Slightly transparent background */
+    padding: 8px; /* Reduced padding */
+    border-radius: 4px; /* Slightly smaller border-radius */
+    max-width: 250px; /* Reduced max-width */
+    z-index: 10; /* Ensure it's above the map */
+    color: white;
+    text-decoration: none;
+    font-size: 0.875rem; /* Smaller font size */
+    text-align: left;
+}
+
+p {
+    color: black;
+    font-size: 0.875rem; /* Smaller font size */
+}
+
+.divider {
+    margin-top: 1rem; /* my-4 */
+    margin-bottom: 1rem; /* my-4 */
+}
+
+.divider hr {
+    border-top-width: 2px; /* border-t-2 */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+.comment-p {
+    font-size: 0.875rem; /* text-sm */
+    margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.view-review-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 20rem; /* max-w-sm */
+    cursor: pointer;
+}
+
+.view-review-mage-container img {
+    width: 100%;
+    height: auto;
+    max-width: 18.75rem; /* max-w-[300px] */
+    margin-left: auto; /* mx-auto */
+    margin-right: auto;
+}
+
+.comments-container {
+    margin-top: 1.5rem; /* 24px */
+}
+.comments-container-header {
+    font-weight: 600;
+    font-size: 1rem; /* 16px */
+    margin-bottom: 0.5rem; /* 8px */
+}
+.comments-container-btn {
+    color: #3b82f6; /* Medium blue color */
+    margin-bottom: 0.5rem; /* 8px */
+}
+
+.commenter-username {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem; /* 8px */
+}
+
+.commenter-username p {
+    font-weight: bold;
+}
+
+.commenter-p2 {
+    font-size: 0.875rem; /* text-sm */
+    margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.commenter-date {
+    font-size: 0.875rem; /* text-sm */
+    margin-bottom: 0.5rem; /* mb-2 */
+    color: #6b7280; /* text-gray-500 */
+}
+
+.comment-section {
+    margin-top: 1.5rem; /* mt-6 */
+    display: flex;
+    align-items: center;
+}
+
+.comment-textarea {
+    width: 100%; /* w-full */
+    padding: 0.5rem; /* p-2 */
+    border: 1px solid #e5e7eb; /* border */
+    border-radius: 0.375rem; /* rounded-md */
+    margin-right: 0.5rem; /* mr-2 */
+}
+
+.comment-button {
+    background-color: #3b82f6; /* bg-blue-500 */
+    color: white; /* text-white */
+    padding: 0.5rem 1rem; /* px-4 py-2 */
+    border-radius: 0.375rem; /* rounded-md */
+}
+
+.close-comment-btn {
+    background-color: #d1d5db; /* bg-gray-300 */
+    padding: 0.5rem 1rem; /* px-4 py-2 */
+    border-radius: 0.375rem; /* rounded-md */
+    margin-top: 1rem; /* mt-4 */
+}
+
+.modal-overlay {
+    position: fixed; /* fixed */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; /* inset-0 */
+    background-color: rgba(31, 41, 55, 0.75); /* bg-gray-800 bg-opacity-75 */
+    display: flex; /* flex */
+    justify-content: center; /* justify-center */
+    align-items: center; /* items-center */
+    z-index: 50; /* z-50 */
+}
+
+.modal-card {
+    background-color: white; /* bg-white */
+    padding: 1rem; /* p-4 */
+    border-radius: 0.375rem; /* rounded-md */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+    width: 100%; /* w-full */
+    max-width: 42rem; /* max-w-2xl */
+}
+
+.close-modal {
+    position: absolute; /* absolute */
+    top: 4rem; /* top-2 */
+    right: 0.5rem; /* right-2 */
+    color: white; /* text-white */
+    font-weight: bold; /* font-bold */
+    font-size: 1.25rem; /* text-xl */
+}
+
+.directions button {
+    background-color: #f0f0f0; /* Light grey background */
+    color: #333; /* Text color */
+    border: 2px solid #ccc; /* Border color */
+    padding: 8px 16px; /* Reduced padding */
+    margin: 4px 0; /* Reduced spacing between buttons */
+    cursor: pointer; /* Change cursor to pointer when hovering over the button */
+    border-radius: 4px; /* Slightly smaller border-radius */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    width: 100%; /* Make the button cover the full width of the parent div */
+    font-size: 0.875rem; /* Smaller font size */
+}
+
+.directions button:hover {
+    background-color: #002369; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+    border-color: #ffffff; /* Match the border color to the hover background */
+}
+
+.cancel-button {
+    background-color: red;
+    color: white;
+    padding: 10px; /* Reduced padding */
+    border: none;
+    border-radius: 4px; /* Slightly smaller border-radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 0.875rem; /* Smaller font size */
+}
+
+.cancel-button:hover {
+    background-color: darkred;
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.hover\:bg-blue-600:hover {
+    background-color: #2563eb; /* Darker shade of blue */
+}
+
+/* Updated container for smaller layout */
+.parent-container {
+    display: flex;
+    gap: 5px; /* Space between buttons */
+    align-items: center;
+    justify-content: flex-start; /* Align the buttons to the left */
+    width: 100%; /* Ensure the container takes the full width */
+    position: relative; /* Required for absolute positioning of heart and bookmark icons */
+}
+
+/* General button styles for consistency */
+.parent-container button {
+    font-size: 0.7rem; /* Reduce font size */
+    padding: 2px 6px; /* Default padding for buttons */
+    border-radius: 4px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -2px; /* Reduce space between buttons */
+    height: 38px; /* Fixed height for buttons */
+}
+
+/* Icon size */
+.parent-container button i {
+    font-size: 0.7rem; /* Reduce icon size */
+}
+
+
+
+/* Adjust icon size within the heart/bookmark buttons */
+.parent-container .heart-icon i {
+    font-size: 1.5rem; /* Slightly larger icon for visibility */
+    color: red;
+}
+
+.parent-container .bookmark-icon i {
+    font-size: 1.5rem; /* Slightly larger icon for visibility */
+    color: #0038a7;
+}
+
+/* Hover effect for heart/bookmark buttons */
+.parent-container .heart-icon:hover,
+.parent-container .bookmark-icon:hover {
+    background-color: #f0f0f0; /* Light gray hover background */
+}
+
+.parent-container .heart-icon,
+.parent-container .bookmark-icon {
+    margin-left: 0; /* Remove any left margin */
+    margin-right: 0; /* Remove any right margin */
+}
+
+.sidebar-icon {
+    color: #002369;
+    position: absolute;
+    top: 4;
+    left: 4;
+    z-index: 10;
+    margin-left: 4px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.sidebar-icon:hover {
+    color: #0038a7; /* Slightly lighter shade for hover effect */
+}
+
+.icon-btn-container{
+    padding: 0; /* Remove padding */
+    width: 30px; /* Set a smaller width for heart/bookmark icons */
+    height: 30px; /* Set a smaller height for heart/bookmark icons */
+    border: none;
+    background-color: transparent; /* No background color */
+    display: inline-flex; /* Ensure the buttons are inline with no gap */
+    position: absolute; /* Position them absolutely within the parent container */
+    bottom: 20%;
+    right: 10%;
+}
+    
+
+.sidebar-icon-mobile {
+    display: none;
+}
+
+.clear-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #6b7280; /* equivalent to text-gray-500 */
+    font-weight: 700; /* equivalent to font-bold */
+}
+
+.directions-btn{
+    color: black;
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+    z-index: 10;
+    margin-left: 4px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.directions-btn:hover {
+    color: #0038a7; /* Slightly lighter shade for hover effect */
+}
+
+@media 
+    (min-width: 800px) and (max-width: 1299px)
+{
+    .maps-container{
+        overflow-y: auto; /* Enables vertical scrolling */
+        max-height: 100vh; /* Ensures the container doesn't exceed the viewport height */
+    }
+
+    .sidebar-container {
+        width: 80%;
+    }
+
+    .parent-container button {
+        font-size: 10px;
+        width: 27%; /* Fixed width for buttons */
+        height: 38px; /* Fixed height for buttons */
+    }
+
+    .icon-btn-container{
+        padding: 0; /* Remove padding */
+        width: 10px; /* Set a smaller width for heart/bookmark icons */
+        height: 30px; /* Set a smaller height for heart/bookmark icons */
+        border: none;
+        background-color: transparent; /* No background color */
+        display: inline-flex; /* Ensure the buttons are inline with no gap */
+        position: absolute; /* Position them absolutely within the parent container */
+        bottom: 20%;
+        right: 10%;
+        gap: 20px;
+    }
+
+    .parent-container {
+        display: flex;
+        gap: 5px; /* Space between buttons */
+        align-items: center;
+        justify-content: flex-start; /* Align the buttons to the left */
+        width: 100%; /* Ensure the container takes the full width */
+        position: relative; /* Required for absolute positioning of heart and bookmark icons */
+    }
+}
+
+/* Tablet */
+@media 
+    (min-width: 600px) and (max-width: 1200px)
+{
+    .sidebar-container {
+        width: 100%;
+    }
+
+    .maps-container.show-sidebar {
+        display: none;
+    }
+
+    .place-btn {
+        font-size: 10px;
+        width: 27%; /* Fixed width for buttons */
+        height: 38px; /* Fixed height for buttons */
+    }
+
+    .sidebar-icon-mobile {
+        font-size: 25px;
+        display: block; /* Ensure the sidebar icon is visible */
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    .icon-btn-container{
+        gap: 20px;
+    }
+    .directions{
+        position: absolute;
+        bottom: 80px; /* Distance from the bottom of the map */
+        right: 70px; /* Distance from the right edge of the map */
+    }
+
+}
+
+/* Mobile */
+@media (min-width: 320px) and (max-width: 599px) {
+    .sidebar-container {
+        width: 100%;
+    }
+    
+    .maps-container.show-sidebar {
+        display: none;
+    }
+
+    .parent-container button {
+        font-size: 11px;
+        width: 26%; /* Fixed width for buttons */
+        height: 38px; /* Fixed height for buttons */
+    }
+    .icon-btn-container{
+        right: 20px;
+        gap: 20px;
+    }
+    .sidebar-icon-mobile {
+        font-size: 25px;
+        display: block; /* Ensure the sidebar icon is visible */
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    .directions{
+        position: absolute;
+        bottom: 80px; /* Distance from the bottom of the map */
+        right: 70px; /* Distance from the right edge of the map */
+    }
+
+    .directions-btn{
+        position: absolute;
+        bottom: 70px;
+        right: 20px;
+    }
+}
+
+.blue-background-text {
+    color: rgb(229, 237, 117); /* White text for contrast */
+}
+
+.comments-container-show-btn {
+    color: #1861f2;
+}

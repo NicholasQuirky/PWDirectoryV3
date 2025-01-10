@@ -1,0 +1,478 @@
+/* Core Layout */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height:100vh;
+    background-color: #dfe3ee;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    flex-direction: row-reverse; /* Swaps the positions of the containers */
+}
+
+/* Left Container (Login Form) */
+.left-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 2rem;
+    padding-right: 3rem;
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+}
+
+.right-header {
+    position: relative;
+    top: 260px;
+    left: 200px;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #0038A7;
+}
+
+.right-subtitle {
+    position: relative;
+    top: 270px;
+    left: 200px;
+    color: #333;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.logo-placeholder {
+    position: relative;
+    top: 250px;
+    left: 200px;
+    width: 140px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 0.1rem; /* Space between logo and header */
+}
+
+/* Login Form Styles */
+.login-container {
+    animation: slideInFromLeft 1s ease-out;
+    max-width: 40rem;
+    width: 100%;
+    background: #f7f7f7;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.login-subtitle {
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 2rem;
+    animation: appear 3s ease-out;
+    text-align: center;
+    color: #0038A7;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* Input Fields */
+.relative {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.login-input {
+    height: 2.5rem;
+    width: 100%;
+    border: 1px solid #8b9dc3;
+    background: white;
+    color: #333;
+    outline: none;
+    padding: 0.5rem 2.5rem 0.5rem 0.5rem;
+    border-radius: 0.25rem;
+    transition: border-color 0.2s ease;
+}
+
+/* Password Toggle */
+.toggle-password-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: small;
+    color: #333;
+    outline: none;
+}
+
+.toggle-password-btn:hover {
+    color: #555;
+}
+
+.login-label {
+    position: absolute;
+    left: 0;
+    top: -1.5rem;
+    font-size: 0.875rem;
+    color: #000000;
+    transition: all 0.2s ease;
+}
+
+.forgot-password {
+    color: #333;
+    text-decoration: underline;
+}
+
+.forgot-password:hover {
+    color: #555555;
+}
+
+.login-button {
+    width: 30%;
+    padding: 0.5rem 1rem;
+    background-color: #0038A7;
+    border-radius: 0.5rem;
+    color: #f7f7f7;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    align-self: flex-end;
+}
+
+.login-button:hover {
+    background-color: #00297D;
+}
+
+.login-signup {
+    text-align: center;
+    color: #333;
+}
+
+.login-signup a {
+    color: #333;
+    text-decoration: underline;
+}
+
+.login-signup a:hover {
+    color: #555;
+}
+
+/* Checkbox Styles */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #333;
+}
+
+.checkbox-input {
+    height: 1rem;
+    width: 1rem;
+    background-color: #fff;
+    border-color: #0038A7;
+    border-radius: 0.25rem;
+    color: #0038A7;
+}
+
+.checkbox-label span {
+    margin-left: 0.5rem;
+}
+
+.error-message {
+    color: #0038A7;
+    font-size: small;
+}
+
+.status-message {
+    background-color: #0038A7;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #66B2FF;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media 
+    (min-width: 1400px) and (max-width: 1799px)
+{
+    .login-container {
+        position: relative;
+        right: -15px;
+     }
+ 
+     .right-header {
+         position: relative;
+         top: 240px;
+         left: 60px;
+         font-size: 3rem;
+     }
+     
+     .right-subtitle {
+         position: relative;
+         top: 300px;
+         left: 60px;
+         color: #333;
+         margin-top: -2rem;
+         font-size: 1.5rem;
+         text-align: center;
+     }
+     
+     .logo-placeholder {
+         position: relative;
+         top: 210px;
+         left: 70px;
+         width: 140px; /* Adjust size as needed */
+         height: auto;
+         margin-bottom: 0.1rem; /* Space between logo and header */
+     }
+}
+
+/* Media Queries */
+@media 
+    (min-width: 901px) and (max-width: 1399px)
+{
+
+    .login-container {
+       position: relative;
+       right: -15px;
+    }
+
+    .right-header {
+        position: relative;
+        top: 240px;
+        left: 20px;
+        font-size: 1.8rem;
+    }
+    
+    .right-subtitle {
+        position: relative;
+        top: 300px;
+        left: 20px;
+        color: #333;
+        margin-top: -2rem;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    
+    .logo-placeholder {
+        position: relative;
+        top: 210px;
+        left: 20px;
+        width: 140px; /* Adjust size as needed */
+        height: auto;
+        margin-bottom: 0.1rem; /* Space between logo and header */
+    }
+}
+
+/* Tablet */
+@media 
+    (min-width: 600px) and (max-width: 900px)
+{
+    .main-content {
+        flex-direction: column; /* Keep the containers stacked */
+    }
+
+    .right-container {
+        min-height: 35vh;
+        order: -1; /* Make the right container appear on top */
+    }
+
+    .right-header {
+        position: relative;
+        top: 60px;
+        left: 5px;
+        font-size: 1.7rem;
+        font-weight: 800;
+        color: #0038A7;
+    }
+
+    .right-subtitle {
+        position: relative;
+        top: 65px;
+        left: 5px;
+        color: #333;
+        margin-top: 1rem;
+        font-size: 1.1rem;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .logo-placeholder {
+        position: relative;
+        top: 50px;
+        left: 5px;
+        width: 140px; /* Adjust size as needed */
+        height: auto;
+        margin-bottom: 0.1rem; /* Space between logo and header */
+    }
+
+    .login-container{
+        margin-bottom: 10px;
+    }
+
+    .login-form {
+        gap: 4vw;
+    }
+
+    .login-input {
+        height: 1.8rem; /* Fixed height */
+        font-size: small;
+    }
+
+    .login-subtitle {
+        font-size: medium;
+        margin-bottom: 0.7rem;
+    }
+
+    .login-label {
+        font-size: small;
+        position: absolute;
+        left: 0;
+        top: -1.3rem;        
+    }
+
+
+}
+
+
+/* Mobile */
+@media (min-width: 320px) and (max-width: 599px) {
+    .main-content {
+        flex-direction: column; /* Keep the containers stacked */
+    }
+
+    .right-container {
+        min-height: 35vh;
+        order: -1; /* Make the right container appear on top */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .page-container {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .right-header {
+        position: relative;
+        top: 60px;
+        left: 5px;
+        font-size: 1.7rem;
+        font-weight: 800;
+        color: #0038A7;
+    }
+    
+    .right-subtitle {
+        position: relative;
+        top: 65px;
+        left: 5px;
+        color: #333;
+        margin-top: 1rem;
+        font-size: 1.1rem;
+        font-weight: 400;
+        text-align: center;
+    }
+    
+    .logo-placeholder {
+        position: relative;
+        top: 50px;
+        left: 5px;
+        width: 140px; /* Adjust size as needed */
+        height: auto;
+        margin-bottom: 0.1rem; /* Space between logo and header */
+    }
+    
+
+    .left-container {
+        flex: 1; /* Ensure it also takes available height */
+        padding: 1.5rem; /* Keep the padding for aesthetics */
+    }
+
+    .login-container{
+        margin-bottom: 30px;
+    }
+
+    .login-title {
+        font-size: x-large;
+    }
+
+    .checkbox-label {
+        font-size: 0.8rem;
+    }
+
+    .login-form {
+        gap: 4vw;
+    }
+
+    .login-input {
+        height: 1.8rem; /* Fixed height */
+        font-size: small;
+    }
+
+    .forgot-password {
+        font-size: small;
+    }
+
+    .login-subtitle {
+        font-size: medium;
+        margin-bottom: 0.7rem;
+    }
+
+    .login-label {
+        font-size: small;
+        position: absolute;
+        left: 0;
+        top: -1.3rem;        
+    }
+
+    .login-button {
+        font-size: small;
+        height: auto; /* Allows height to be dynamic */
+        width: 60%;
+        padding: 0.3rem 1rem; /* Add padding for spacing inside */
+        margin-top: 1rem;
+        align-self: center;
+        text-align: center;
+        display: inline-flex; /* Use flex to center text dynamically */
+        justify-content: center; /* Center text horizontally */
+        align-items: center; /* Center text vertically */
+        box-sizing: border-box; /* Include padding within the button dimensions */
+    }
+    
+
+    .login-signup {
+        font-size: small;
+    }
+
+    .checkbox-label{
+        font-size: small;
+    }
+    .forgot-password{
+        font-size: small;
+    }
+    .toggle-password-btn{
+        font-size: small;
+    }
+ 
+}
